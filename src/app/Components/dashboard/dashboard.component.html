@@ -1,0 +1,68 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+    <mat-toolbar color="white" class="example-toolbar">
+        <div class="menu" mat-icon-button (click)="snav.toggle()">
+            <img src="../../../assets/menu.svg" style="width: 24px;">
+        </div>
+        <div class="image">
+            <img src="../../../assets/Notes logo.png" style=" width: 40px; margin-bottom: 4px; margin-right: 4px;">
+            <h1 class="header">Fundoo</h1>
+        </div>
+
+
+
+
+        <div class="searchBox" fxLayout="row" fxLayoutAlign="center center">
+            <img class="icon" src="../../../assets/search.svg" style="width: 24px;height: 24px;">
+            <input class="txt" type="text" matInput placeholder="Search" (keyup)="searchNotes($event)">
+        </div>
+        <div class="tools">
+            <img src="../../../assets/refresh.svg" style="width: 24px;padding-right: 25px;margin-left: 25px;">
+            <button mat-icon-button style="background: none;border: none;" >
+                <img *ngIf=!show src="../../../assets/list view.svg" style="width: 24px;padding-right: 25px;" (click)="ChangeView()">
+                <img *ngIf=show src="../../../assets/grid_view_FILL0.svg" style="width: 24px;padding-right: 25px;" (click)="ChangeView()">
+            </button>
+            <img src="../../../assets/settings.svg" style="width: 24px;padding-right: 50px;">
+        </div>
+
+        <div class="tools2">
+            <img src="../../../assets/apps.svg" style="width: 24px;padding-right: 25px;">
+
+            <button mat-icon-button [matMenuTriggerFor]="logout" class="logoutbtn">
+                <img src="../../../assets/person.svg" style="width: 24px;">
+            </button>
+            <mat-menu #logout="matMenu">
+                <button mat-menu-item (click)="LogOut()">Logout</button>
+
+            </mat-menu>
+        </div>
+    </mat-toolbar>
+
+    <mat-sidenav-container class="navcontainer" [style.marginTop.px]="mobileQuery.matches ? 56 : 0"
+        style="height: 800px;">
+        <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+            fixedTopGap="56">
+            <mat-nav-list class="nav-list">
+                <a mat-list-item routerLink="/dashboard/notes">
+                    <img class="icons" src="../../../assets/lightbulb.svg">Notes</a>
+                <a mat-list-item>
+                    <img class="icons" src="../../../assets/notifications.svg">Reminder</a>
+
+                <div fxLayout="column">
+                    <a mat-list-item fxLayout="row" *ngFor="let label of LabelList">
+                        <img class="iconlabel" src="../../../assets/label.svg">{{label['labelName']}}
+                    </a>
+                </div>
+
+
+                <a mat-list-item (click)="openDialog()">
+                    <img class="icons" src="../../../assets/edit.svg">Label</a>
+                <a mat-list-item routerLink="/dashboard/archive">
+                    <img class="icons" src="../../../assets/archive.svg">Archive</a>
+                <a mat-list-item routerLink="/dashboard/trash">
+                    <img class="icons" src="../../../assets/delete.svg">Trash</a>
+            </mat-nav-list>
+        </mat-sidenav>
+        <router-outlet></router-outlet>
+
+    </mat-sidenav-container>
+</div>

@@ -1,0 +1,134 @@
+.example-container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0
+}
+
+.example-toolbar {
+    width: 1366px;
+    height: 64px;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    color: #5f6368;
+    background: white;
+}
+
+.menu {
+    width: 24px;
+    padding-top: 12px;
+    padding-left: 12px;
+    padding-bottom: 12px;
+    padding-right: 12px;
+    margin-right: 4px;
+    margin-left: 4px;
+
+}
+
+.image {
+    display: flex;
+
+}
+
+.header {
+    font-family: "Product Sans", Arial, sans-serif;
+    width: 50px;
+    height: 24px;
+    padding-top: 5px;
+    padding-left: 3px;
+    color: #5f6368;
+}
+
+.searchBox {
+    display: flex;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    width: 650px;
+    height: 48px;
+    outline: none;
+    margin-right: 100px;
+    margin-left: 150px;
+    background: whitesmoke;
+}
+
+.icon {
+    width: 24px;
+    height: 24px;
+    padding-left: 8px;
+    padding-top: 8px;
+    padding-right: 8px;
+    padding-bottom: 8px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-right: 3px;
+    margin-left: 3px;
+    border-radius: 10px 40px 40px 10px;
+    font-weight: 450;
+    //padding: 0 35px;
+
+}
+
+.logoutbtn {
+
+    background: white;
+    border: transparent;
+}
+
+.txt {
+    width: 615px;
+    height: 24px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    border: transparent;
+    font: normal 16px Google Sans, Roboto, Helvetica, Arial, sans-serif;
+    background: whitesmoke;
+}
+
+.icons {
+
+    width: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+
+}
+
+//====================//
+.example-is-mobile .example-toolbar {
+    position: fixed;
+    /* Make sure the toolbar will stay on top of the content as it scrolls past. */
+    z-index: 2;
+}
+
+h1.example-app-name {
+    margin-left: 8px;
+}
+
+.sidenav {
+    width: 300px;
+    height: 800px;
+}
+
+a:hover {
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    background-color: #feefc3 !important;
+}
+
+.navcontainer {
+    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
+       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
+    flex: 1;
+    background: white;
+}
+
+.iconlabel { 
+    display: flex;
+    width: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
