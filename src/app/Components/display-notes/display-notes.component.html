@@ -2,7 +2,7 @@
     <div >
         <div class="display-note ">
             <span class="text" *ngIf="isDisplaynoteComponent">PINNED</span>
-            <div *ngFor="let note of NoteArray | filters : search">
+            <div *ngFor="let note of NoteArray | filters : search"> 
                 <div *ngIf="note.pin">
                     <div [ngClass]="conditionView == true ? 'note-card2' : 'note-card1' " [style.background]="note.color">
                         <div>
