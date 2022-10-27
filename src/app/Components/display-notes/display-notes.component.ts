@@ -9,7 +9,7 @@ import { UpdateNoteComponent } from '../update-note/update-note.component';
 
 @Component({
   selector: 'app-display-notes', 
-  templateUrl: './display-notes.component.html',
+  templateUrl: './display-notes.component.html', 
   styleUrls: ['./display-notes.component.scss']
 })
 export class DisplayNotesComponent implements OnInit {
