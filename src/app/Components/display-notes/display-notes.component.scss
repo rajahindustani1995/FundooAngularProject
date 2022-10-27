@@ -1,0 +1,80 @@
+.display-note{
+    display: flex;
+    flex-flow: wrap;
+    //flex-flow: column;
+    position:relative;
+    left: 10%;
+    width: 90%;
+    height: auto;
+    column-gap: 15px;
+    margin-top: 40px;
+}
+
+// .display-note2{
+//     display: flex;
+//     //flex-flow: wrap;
+//     flex-flow: column;
+//     position: absolute;
+//     left: 10%;
+//     width: 80%;
+//     height: 100px;
+//     column-gap: 15px;
+//     margin-top: 40px;
+// }
+.text{
+    color: #5f6368;
+    letter-spacing: .07272727em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: .6875rem;
+    font-weight: 500;
+    line-height: 1rem;
+}
+
+.pinbutton {
+    width: 40px;
+    height: 30px;
+    margin-left: 241px;     
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+// img.pin  {
+//     margin-left: 175px;
+//     opacity: 0.7;
+//     height: 24px;
+//     position: fixed;   
+// }
+    
+
+.note-card1 {
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(156, 156, 156);
+    overflow-wrap: break-word;
+    width: 200px;
+    //width: 580px;
+    height: auto;
+    min-height: 80px;
+    margin-top: 20px;
+    padding: 12px;
+}
+.note-card2 {
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px rgb(156, 156, 156);
+    overflow-wrap: break-word;
+    //width: 200px;
+    width: 580px;
+    height: auto;
+    min-height: 80px;
+    margin-top: 20px;
+    padding: 12px;
+}
+
+.Container{
+    display: flex;
+    flex-flow: wrap;
+    column-gap: 15px;
+    margin-top: 40px;
+    left: 10%;
+}
+  
+  

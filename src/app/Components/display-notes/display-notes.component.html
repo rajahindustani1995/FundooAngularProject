@@ -1,0 +1,110 @@
+<div>
+    <div >
+        <div class="display-note ">
+            <span class="text" *ngIf="isDisplaynoteComponent">PINNED</span>
+            <div *ngFor="let note of NoteArray | filters : search">
+                <div *ngIf="note.pin">
+                    <div [ngClass]="conditionView == true ? 'note-card2' : 'note-card1' " [style.background]="note.color">
+                        <div>
+                            <div fxLayout="row" fxLayoutAlign="space-between center">
+                                <div (click)="openDialog(note)">
+                                    <span>{{note.title}}</span>
+                                </div>
+                                <button mat-icon-button style="background: none;border: none;">
+                                    <img class=" search_image" src="../../../assets/push_pin_FILL1.svg" width="24px"
+                                        height="24px" (click)="UnPinNotes(note)">
+                                </button>
+                            </div>
+                            <div (click)="openDialog(note)">
+                                <span>{{note.discription}}</span>
+                            </div>
+                            <div> {{note.notesID}} {{note.pin}}</div>
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="space-evenly center" style="margin-top: 37px">
+                            <app-icons [notedata]="note" (ColorEvent)="colorMessage($event)"
+                                (TrashEvent)="trashMessage($event)" (ArchiveEvent)="archiveMessage($event)"
+                                (UnarchiveEvent)="unarchiveMessage($event)" (DeleteEvent)="deleteMessage($event)">
+                            </app-icons>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="display-note ">
+            <span class="text" *ngIf="isDisplaynoteComponent">OTHERS</span>
+            <div *ngFor="let note of NoteArray | filters : search">
+                <div *ngIf="!note.pin">
+                    <div [ngClass]="conditionView == true ? 'note-card2' : 'note-card1' " [style.background]="note.color">
+                        <div>
+                            <div fxLayout="row" fxLayoutAlign="space-between center">
+                                <div (click)="openDialog(note)">
+                                    <span>{{note.title}}</span>
+                                </div>
+                                <button mat-icon-button style="background: none;border: none;">
+                                    <img *ngIf="isPin" src="../../../assets/push_pin.svg" width="24px" height="24px"
+                                        (click)="PinNotes(note)">
+                                </button>
+                            </div>
+                            <div (click)="openDialog(note)">
+                                <span>{{note.discription}}</span>
+                            </div>
+                            <div> {{note.notesID}} {{note.pin}}</div>
+                        </div>
+                        <div fxLayout="row" fxLayoutAlign="space-evenly center" style="margin-top: 37px">
+                            <app-icons [notedata]="note" (ColorEvent)="colorMessage($event)"
+                                (TrashEvent)="trashMessage($event)" (ArchiveEvent)="archiveMessage($event)"
+                                (UnarchiveEvent)="unarchiveMessage($event)" (DeleteEvent)="deleteMessage($event)">
+                            </app-icons>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br> -->
+<!-- <div *ngIf="isPin">
+        <div *ngFor="let note of NoteArray | filters : search">
+            <div *ngIf="!note.pin">
+                <div class="note-card " [style.background]="note.color">
+                    <div>
+                        <div fxLayout="row" fxLayoutAlign="space-between center">
+                            <div (click)="openDialog(note)">
+                                <span>{{note.title}}</span>
+                            </div>
+                            <button mat-icon-button style="background: none;border: none;">
+                                <img *ngIf="isPin" src="../../../assets/push_pin.svg" width="24px" height="24px"
+                                    (click)="PinNotes(note)">
+
+                            </button>
+                        </div>
+                        <div (click)="openDialog(note)">
+                            <span>{{note.discription}}</span>
+                        </div>
+                        <div> {{note.notesID}} {{note.pin}}</div>
+                    </div>
+                    <div fxLayout="row" fxLayoutAlign="space-evenly center" style="margin-top: 37px">
+                        <app-icons [notedata]="note" (ColorEvent)="colorMessage($event)"
+                            (TrashEvent)="trashMessage($event)" (ArchiveEvent)="archiveMessage($event)"
+                            (UnarchiveEvent)="unarchiveMessage($event)" (DeleteEvent)="deleteMessage($event)">
+                        </app-icons>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
