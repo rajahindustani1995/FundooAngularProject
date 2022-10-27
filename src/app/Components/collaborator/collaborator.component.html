@@ -1,0 +1,55 @@
+<div class="update">
+    <div fxLayout="column">
+        <div class="Table1">
+            <h2 class="title">Collaborators</h2>
+            <div fxLayout="row" class="User">
+                <img class="user-icons" style="width:27px;height: 30px;" src="../../../assets/person.svg" alt="">
+                <div>
+                    <h4 class="UserName">Rajesh Ambavale<span
+                            style="font-style: italic;font-weight: lighter;font-size: small;">(Owner)</span></h4>
+                    <p style="font-size: 13px; margin-top: 0px;">raj@gmailcom</p>
+                </div>
+            </div>
+            <div *ngFor="let colab of colabList" fxLayout="row" fxLayoutAlign="space-between center"
+                style="    margin-bottom: 5px;margin-top: 5px;">
+                <div fxLayout="row" fxLayoutAlign="start center">
+                    <img class="user-icons" src="../../../assets/person.svg" alt="">
+                    {{colab.collaboratorEmail}}
+                </div>
+                <img class="icons" src="../../../assets/close.svg" alt="" (click)="DeleteColab(colab)">
+            </div>
+        </div>
+        <div class="Data" fxLayout="row" fxLayoutAlign="space-between center">
+            <div>
+                <div class="text" [formGroup]="colabForm" fxLayout="row" fxLayoutAlign="start center">
+                    <img class="user-icons" src="../../../assets/person_add.svg" alt="">
+                    <!-- <form class="example-form">
+                        <input type="text" placeholder="Person or email to share with"
+                            formControlName="collaboratorEmail" [formControl]="control" [matAutocomplete]="auto">
+                        <mat-autocomplete #auto="matAutocomplete">
+                            <mat-option *ngFor="let colabarray of filteredColabArray | async" [value]="colabarray">
+                                {{colabarray['collaboratorEmail']}}
+                                {{colabarray.collaboratorEmail}}
+                            </mat-option>
+                        </mat-autocomplete>
+                    </form> -->
+                    <!-- {{colabArray.collaboratorEmail}} -->
+                    <input class="data" placeholder="Person or email to share with" formControlName="collaboratorEmail">
+                </div>
+            </div>
+            <div>
+                <img class="icons" src="../../../assets/done.svg" alt="" (click)="CreateColab()">
+            </div>
+        </div>
+
+
+    </div>
+    <mat-card-footer fxLayout="row" fxLayoutAlign="end end">
+        <button mat-button matTooltip="Close"
+            style="background-color: white;border-color: transparent;padding-top: 15px;" mat-dialog-close
+            class="close-card">Cancel</button>
+        <button mat-button matTooltip="Save"
+            style="background-color: white;border-color: transparent;padding-top: 15px;" mat-dialog-close
+            class="close-card">Save</button>
+    </mat-card-footer>
+</div>
