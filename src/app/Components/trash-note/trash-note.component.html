@@ -1,0 +1,23 @@
+<app-display-notes [NoteArray]="TrashList" (DeleteEvent)="deleteMessage($event)" ></app-display-notes>
+
+<!-- <div class="display-note row">
+    <div *ngFor="let note of TrashList">
+        <div class="note-card ">
+            <div >
+                <div>
+                    <span >{{note.title}}</span>
+                </div>
+                <div>
+                    <span>{{note.discription}}</span>
+                </div>
+                <div> {{note.notesID}}</div>
+            </div>
+            <div class="icons">
+                <button class="notesbutton">
+                  <img src="../../../assets/delete_forever.svg" (click)="DeleteNote()">
+                  <img src="../../../assets/restore_from_trash.svg" (click)="UntrashNote(note)">
+                </button>
+              </div>
+        </div>
+    </div>
+</div> -->

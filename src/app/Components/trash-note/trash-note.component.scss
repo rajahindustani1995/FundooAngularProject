@@ -1,0 +1,51 @@
+.display-note{
+    display: flex;
+    flex-flow: wrap;
+    position: absolute;
+    left: 10%;
+    width: 80%;
+    height: 100px;
+    column-gap: 15px;
+    margin-top: 40px;
+}
+
+.pinbutton {
+    width: 40px;
+    height: 30px;
+    margin-left: 241px;     
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+// img.pin  {
+//     margin-left: 175px;
+//     opacity: 0.7;
+//     height: 24px;
+//     position: fixed;   
+// }
+    
+.note-card {
+     border-radius: 10px;
+    // height: 120px;
+
+    box-shadow: 2px 2px 2px 2px rgb(156, 156, 156);
+    overflow-wrap: break-word;
+    width: 200px;
+    height: auto;
+    min-height: 80px;
+    margin-top: 20px;
+    padding: 12px;
+}
+ 
+.notesbutton{
+   display: flex;
+   gap: 14px;
+   border: none;
+   background: none;
+   cursor: pointer;
+   img{
+       height: 20px;
+       width: 20px;
+       padding-top: 10px;
+   }
+}
