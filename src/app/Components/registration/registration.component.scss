@@ -1,0 +1,115 @@
+.registrationTable{
+    display: flex;
+    justify-content: center;
+    padding-left: 30%;
+    padding-right: 30%;
+}
+
+.table{
+    background-color: #ffffff;
+    display: flex;
+    margin-bottom: 50px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #faf7f7;
+    border-radius: 5px;
+    box-shadow: 0px 3px 6px #00000029;
+    margin-bottom: 35px;
+    margin-top: 40px;
+    
+}
+
+.formate{
+    width: 700px;
+    height: 500px;
+    padding: 44px 30px;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    opacity: 1;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.form{
+    text-align: left;
+}
+.title {
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    letter-spacing: 0px;
+    color: #42515f;
+    text-align: left;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.row{
+    display: flex;
+    
+}
+
+.name{
+    margin: 2px;
+    margin-right: 20px;
+    text-align: left padding
+}
+.email{
+    width: 420px;
+}
+.msg{
+   
+    font-size: 16px;
+    color: #1A73E8;
+    margin-bottom: 10px;
+}
+
+.pswd{
+    margin-right: 20px;
+    text-align: left
+    
+}
+
+.margin {
+    margin: 0 px;
+}
+
+.psw{
+    font-size: 12px;
+    font-family: roboto,"Noto Sans Myanmar UI",arial,sans-serif;
+    color: #5f6368;
+    white-space: normal;
+    
+}
+.btn{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-right: 22px;
+    a{
+        color: #1A73E8;
+        font-size: 16px;
+    }
+    button{
+        background-color:#1a73e8;
+        font-size: 20px;
+        width: 65px;
+        height: 30px;
+        border-radius: 4px;
+        border-color: #1a73e8;
+        color: #fff;
+    }
+}
+
+.image{
+    width: 244px;
+    position: absolute;
+    top: 25%;
+    left: 60%;   
+    width: 244px;
+    aspect-ratio: auto 244 / 244;
+    height: auto;
+    text-align: center
+    
+}
+.caption{
+    
+    font-size: 16px;
+    font-weight: 300s
+}

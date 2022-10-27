@@ -1,0 +1,76 @@
+<div class="registrationTable">
+    <div class="table">
+        <div class="formate">
+            <div class="form">
+                <div class="logo" style="font-size:x-large;padding-left: 10px;width: 100px;height: 34px">
+                    <span style="color: #4169e1">F</span>
+                    <span style="color: #b22222">u</span>
+                    <span style="color: #ff8c00">n</span>
+                    <span style="color: #008000">d</span>
+                    <span style="color: #FF0000">o</span>
+                    <span style="color: #4169e1">o</span>
+                </div>
+                <h1 class="title">Create Your Fundoo Account</h1>
+
+                <form [formGroup]="registerForm">
+
+                    <div class="row" style="height: 95px"> 
+                        <p>
+                            <mat-form-field class="name" appearance="outline">
+                                <mat-label>First Name</mat-label>
+                                <input matInput placeholder="" formControlName="firstName" />
+                                <mat-error>Enter first name</mat-error>
+                            </mat-form-field>
+                        </p>
+                        <p>
+                            <mat-form-field class="name" appearance="outline">
+                                <mat-label>Last Name</mat-label>
+                                <input matInput placeholder="" formControlName="lastName" />
+                                <mat-error>Enter last name</mat-error>
+                            </mat-form-field>
+                        </p>
+
+                    </div>
+
+                    <mat-form-field class="email" appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input matInput placeholder="" formControlName="email" />
+                        <mat-error>Enter an email address</mat-error>
+                        <mat-hint>You can use letters, numbers & periods</mat-hint>
+                    </mat-form-field>
+                    <div class="msg">
+                        <p>Use my current email address instead</p>
+                    </div>
+
+                    <div class="row" style="height: 55px;padding-bottom: 10px">
+                        <mat-form-field class="pswd" appearance="outline">
+                            <mat-label>Password</mat-label>
+                            <input matInput placeholder="" formControlName="password" />
+                            <mat-error>Enter a password</mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="pswd" appearance="outline">
+                            <mat-label>Confirm Password</mat-label>
+                            <input matInput placeholder="" formControlName="confirmpassword" />
+                            <mat-error>Enter a password</mat-error>
+                        </mat-form-field>
+                    </div>
+                </form>
+                <div class="psw">
+                    <p>Use 8 or more characters with a mix of letters,numbers & symbols</p>
+                </div>
+                <mat-checkbox class="margin"> Show password</mat-checkbox>
+                <div class="btn" style="width: 360px">
+                    <a mat-button href="http://localhost:4200/login">Sign in instead</a>
+                    <button mat-raised-button (click)="onSubmit()">Next</button>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="image">
+            <img src="../../../assets/images.svg" alt="">
+            <p class="caption">One account. All of Fundoo working for you.</p>
+        </div>
+    </div>
+</div>
