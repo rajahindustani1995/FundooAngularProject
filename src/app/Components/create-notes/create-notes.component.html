@@ -1,0 +1,32 @@
+<div class="container" fxLayout="column" fxLayoutAlign=" center center">
+    <div class="note" [formGroup]="createForm">
+        <div *ngIf="Show" fxLayout="row" fxLayoutAlign="center center">
+            <input class="title" placeholder="Title" formControlName="title">
+            <a mat-list-item>
+                <button class="pinbutton" mat-flat-button><img src="../../../assets/push_pin.svg" width="24px"
+                        height="24px"></button>
+            </a>
+        </div>
+        <div *ngIf="!Show || Show" (click)="onOpen()" fxLayout="row">
+            <input class="Takenote" placeholder="Take a note ..." formControlName="description">
+            <span *ngIf="!Show" fxLayout="row" class="imgtitle">
+
+                <img style="padding-top: 10px; margin-right: 25px;" src="../../../assets/check_box.svg" width="24px"
+                    height="24px">
+                <img style="padding-top: 10px; margin-right: 25px;" src="../../../assets/brush.svg" width="24px"
+                    height="24px">
+                <img style="padding-top: 10px; margin-right: 25px;" src="../../../assets/image.svg" width="24px"
+                    height="24px">
+
+            </span> 
+        </div>
+        <div *ngIf="Show" fxLayout="row" fxLayoutAlign="start end">
+
+            <app-icons></app-icons>
+            <div fxLayout="row" fxLayoutAlign="end center">
+                <button class="close" (click)="onSubmit()" mat-flat-button>Close</button>
+            </div>
+        </div>
+
+    </div>
+</div>
