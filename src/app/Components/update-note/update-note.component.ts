@@ -9,7 +9,7 @@ import { NotesService } from 'src/app/Services/notesService/notes.service';
   styleUrls: ['./update-note.component.scss']
 })
 export class UpdateNoteComponent implements OnInit {
-  NoteID: any;
+  NoteID: any; 
   updateNoteForm!: FormGroup;
   title: any;
   description: any
