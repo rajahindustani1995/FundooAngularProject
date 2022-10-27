@@ -8,7 +8,7 @@ import { GetAllNotesComponent } from '../get-all-notes/get-all-notes.component';
 import { UpdateNoteComponent } from '../update-note/update-note.component';
 
 @Component({
-  selector: 'app-display-notes',
+  selector: 'app-display-notes', 
   templateUrl: './display-notes.component.html',
   styleUrls: ['./display-notes.component.scss']
 })
