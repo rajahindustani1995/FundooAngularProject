@@ -1,0 +1,57 @@
+<div>
+    <div fxLayout="row" *ngIf="!isTrashComponent">
+        <div class="search_image" mat-flat-button>
+            <img src="../../../assets/add_alert.svg" width="18px" height="18px">
+        </div>
+        <div class="search_image" mat-flat-button (click)="openDialog()">
+            <img src="../../../assets/person_add.svg" width="18px" height="18px">
+        </div>
+        <div class=" search_image" mat-flat-button matTooltip="color" [matMenuTriggerFor]="colorMenu">
+            <img src="../../../assets/palette.svg" width="18px" height="18px">
+            <mat-menu #colorMenu="matMenu">
+                <div *ngFor='let colors of colorChoice' class="color">
+                    <button class="colorIcon" [style.background]="colors.code"
+                        (click)="changeColor(colors.name)"></button>
+                </div>
+            </mat-menu>
+        </div>
+        <div class=" search_image" mat-flat-button>
+            <img src="../../../assets/image.svg" width="18px" height="18px">
+        </div>
+        <div class=" search_image" mat-flat-button matTooltip="Archive" (click)="onArchive()">
+            <img src="../../../assets/archive.svg" width="18px" height="18px">
+
+        </div>
+        <div class=" search_image" mat-flat-button matTooltip="Unarchive" (click)="Unarchive();"
+            *ngIf="isArchiveComponent">
+            <img src="../../../assets/unarchive.svg" width="18px" height="18px">
+
+        </div>
+        <div class=" search_image" mat-flat-button>
+            <img src="../../../assets/more.svg" width="18px" height="18px" [matMenuTriggerFor]="menu">
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="SendToTrash()">Delete</button>
+                <button mat-menu-item [matMenuTriggerFor]="label" >Add label</button>
+                <button mat-menu-item>Add drawing</button>
+                <button mat-menu-item>Make a copy</button>
+                <button mat-menu-item>Show checkboxes</button>
+                <button mat-menu-item>Copy to Fundoo Docs</button>
+
+            </mat-menu>
+            <mat-menu #label="matMenu" >
+                <div fxLayout="column" *ngFor="let list of Label" style="text-align-last: center;">
+                    <!-- <mat-checkbox (click)="onAddLabel()">{{label['labelName']}}</mat-checkbox> -->
+                    <mat-checkbox (click)="onAddLabel(list.labelName)">
+                        <input matInput class="list-labelName"  [(ngModel)]="list.labelName">
+                    </mat-checkbox>
+                </div>
+            </mat-menu> 
+        </div>
+    </div>
+    <div class="icons" *ngIf="isTrashComponent" >
+        <button class="trash_icon" mat-icon-button matTooltip="Delete Forever" (click)="DeleteNote()">
+            <img src="../../../assets/delete_forever.svg" width="18px" height="18px"></button>
+        <button class="trash_icon" mat-icon-button matTooltip="Restore" (click)="Untrashed()">
+            <img src="../../../assets/restore_from_trash.svg" width="18px" height="18px"></button>
+    </div>
+</div>
