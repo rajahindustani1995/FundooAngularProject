@@ -1,0 +1,34 @@
+<div class="Table">
+    <div class="container">
+
+        <div class="form">
+            <div class="form1">
+                <div class="logo" style="font-size:x-large;padding-left: 10px;height: 34px">
+                    <span style="color: #4169e1">F</span>
+                    <span style="color: #b22222">u</span>
+                    <span style="color: #ff8c00">n</span>
+                    <span style="color: #008000">d</span>
+                    <span style="color: #FF0000">o</span>
+                    <span style="color: #4169e1">o</span>
+                </div>
+            </div>
+            <div class="title">Find your email</div>
+            <h3 class="title1">Enter your recovery email</h3>
+            <form [formGroup]="forgetemailForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                    <p>
+                        <mat-form-field class="form_text" appearance="outline">
+                            <mat-label>Email</mat-label>
+                            <input matInput placeholder="" formControlName="email" />
+                            <mat-error>Enter an email address</mat-error>
+                        </mat-form-field>
+                    </p>
+                </div>
+            </form>
+
+            <div class="btn">
+                <button mat-raised-button (click)="onSubmit()">Next</button>
+            </div>
+        </div>
+    </div>
+</div>
