@@ -1,0 +1,27 @@
+<div class="Main">
+    <div class="update" >
+        <div fxLayout="column">
+            <div class="Table1" >
+                <h2 class="title">Edit labels</h2>
+                <div class="container1" create fxLayout="row" fxLayoutAlign="space-between center">
+                    <button class="icons">
+                        <img src="../../../assets/close.svg" alt="" style="width: 22px;">
+                    </button>
+                    <div class="text" [formGroup]="labelForm">
+                        <input class="label" placeholder="Create new label" formControlName="labelName">
+                    </div>
+
+                    <button class="icons">
+                        <img src="../../../assets/done.svg" alt="" style="width: 22px;" (click)="CreateLabel()">
+                    </button>
+                </div>
+                <app-update-label></app-update-label>
+            </div>
+            
+            <mat-card-footer fxLayout="row" fxLayoutAlign="end end">
+                <button mat-button matTooltip="Close" style="background-color: white;border-color: transparent;padding-top: 15px;"
+                    mat-dialog-close class="close-card">Done</button>
+            </mat-card-footer>
+        </div>
+    </div>
+</div>
