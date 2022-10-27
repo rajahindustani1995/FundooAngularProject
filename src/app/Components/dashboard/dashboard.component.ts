@@ -20,7 +20,7 @@ export class DashboardComponent implements OnDestroy {
   show : boolean = false;
   LabelList:any=[]
   labelName:any; 
-  Label:any;
+  Label:any; 
   subscription!: Subscription;
   
   
