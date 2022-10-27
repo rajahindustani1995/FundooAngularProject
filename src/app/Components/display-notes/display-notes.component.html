@@ -7,7 +7,7 @@
                     <div [ngClass]="conditionView == true ? 'note-card2' : 'note-card1' " [style.background]="note.color">
                         <div>
                             <div fxLayout="row" fxLayoutAlign="space-between center">
-                                <div (click)="openDialog(note)">
+                                <div (click)="openDialog(note)"> 
                                     <span>{{note.title}}</span>
                                 </div>
                                 <button mat-icon-button style="background: none;border: none;">
