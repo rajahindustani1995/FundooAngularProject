@@ -11,7 +11,7 @@ export class CreateNotesComponent implements OnInit {
   createForm!: FormGroup;
   Show = false;
 
-  @Output() CreateEvent = new EventEmitter<string>();
+  @Output() CreateEvent = new EventEmitter<string>(); 
 
   onOpen() {
     this.Show = true;
