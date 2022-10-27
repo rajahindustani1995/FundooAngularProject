@@ -1,0 +1,21 @@
+<div class="update" >
+    <div fxLayout="column" style="margin-bottom: 25px;" >
+        <div fxLayout="row" fxLayoutAlign="space-between end">
+            <mat-card-title class="note-title">
+                <input matInput [(ngModel)]="title">
+            </mat-card-title>
+            <button mat-icon-button style="background: none;border: none;">
+                <img src="../../../assets/push_pin.svg" width="24px" height="24px">
+            </button>
+        </div>
+
+        <mat-card-content class="note-description">
+            <input matInput [(ngModel)]="description">
+        </mat-card-content>
+    </div>
+    <mat-card-footer fxLayout="row" fxLayoutAlign="space-between end">
+        <app-icons></app-icons>
+        <button class="btn" mat-button matTooltip="Close" mat-dialog-close class="close-card"
+            (click)="onSubmit()">Close</button>
+    </mat-card-footer>
+</div>
