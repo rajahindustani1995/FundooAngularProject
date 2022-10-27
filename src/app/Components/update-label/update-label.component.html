@@ -1,0 +1,19 @@
+<div>
+    <div class="container2" *ngFor="let list of data" fxLayout="row" fxLayoutAlign="space-between center">
+        <div (mouseover)="cursor=true" (mouseout)="cursor=false">
+            <div *ngIf="!cursor" mat-icon-button>
+                <img class="icons" src="../../../assets/label.svg" alt="">
+            </div>
+            <div *ngIf="cursor" mat-icon-button>
+                <img class="icons" src="../../../assets/delete.svg" alt="" (click)="DeleteLabel(list)">
+            </div>
+        </div>
+        <div>
+            <input matInput class="list-labelName" [(ngModel)]="list.labelName">
+        </div>
+
+        <div>
+            <img class="icons" src="../../../assets/edit.svg" alt="" (click)="UpdateLabel(list)">
+        </div>
+    </div>
+</div>
