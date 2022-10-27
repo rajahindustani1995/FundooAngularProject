@@ -5,7 +5,7 @@ import { NotesService } from 'src/app/Services/notesService/notes.service';
   selector: 'app-trash-note',
   templateUrl: './trash-note.component.html',
   styleUrls: ['./trash-note.component.scss']
-})
+}) 
 export class TrashNoteComponent implements OnInit {
   TrashList:any;
   NotesList:any;
