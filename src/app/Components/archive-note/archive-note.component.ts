@@ -21,7 +21,7 @@ export class ArchiveNoteComponent implements OnInit {
       this.archiveList=result.data; 
       this.archiveList.reverse();     
       this.archiveList = this.archiveList.filter((object:any) => {
-        return object.archive == true && object.trash == false;
+        return object.archive == true && object.trash == false; 
       })
       console.log("Archive list", this.archiveList);
     })
