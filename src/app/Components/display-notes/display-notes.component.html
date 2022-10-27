@@ -11,7 +11,7 @@
                                     <span>{{note.title}}</span>
                                 </div>
                                 <button mat-icon-button style="background: none;border: none;">
-                                    <img class=" search_image" src="../../../assets/push_pin_FILL1.svg" width="24px"
+                                    <img class=" search_image" src="../../../assets/push_pin_FILL1.svg" width="24px" 
                                         height="24px" (click)="UnPinNotes(note)">
                                 </button>
                             </div>
@@ -20,7 +20,7 @@
                             </div>
                             <div> {{note.notesID}} {{note.pin}}</div>
                         </div>
-                        <div fxLayout="row" fxLayoutAlign="space-evenly center" style="margin-top: 37px">
+                        <div fxLayout="row" fxLayoutAlign="space-evenly center" style="margin-top: 37px"> 
                             <app-icons [notedata]="note" (ColorEvent)="colorMessage($event)"
                                 (TrashEvent)="trashMessage($event)" (ArchiveEvent)="archiveMessage($event)"
                                 (UnarchiveEvent)="unarchiveMessage($event)" (DeleteEvent)="deleteMessage($event)">
