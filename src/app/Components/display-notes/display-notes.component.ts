@@ -28,7 +28,7 @@ export class DisplayNotesComponent implements OnInit {
   @Output() ArchiveEvent = new EventEmitter<string>();
   @Output() UnarchiveEvent = new EventEmitter<string>();
   @Output() DeleteEvent = new EventEmitter<string>();
-  @Output() PinNoteEvent = new EventEmitter<string>();
+  @Output() PinNoteEvent = new EventEmitter<string>(); 
   @Output() UpdateEvent = new EventEmitter<string>();
 
   search:any ='';
