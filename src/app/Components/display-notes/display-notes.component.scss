@@ -1,4 +1,4 @@
-.display-note{
+.display-note1{
     display: flex;
     flex-flow: wrap;
     //flex-flow: column;
@@ -10,17 +10,28 @@
     margin-top: 40px;
 }
 
-// .display-note2{
-//     display: flex;
-//     //flex-flow: wrap;
-//     flex-flow: column;
-//     position: absolute;
-//     left: 10%;
-//     width: 80%;
-//     height: 100px;
-//     column-gap: 15px;
-//     margin-top: 40px;
-// }
+.display-note2{
+    flex-flow: wrap;
+    display: flex;
+    //flex-flow: column;
+    justify-content: center;
+    position:relative;
+    left: 10%;
+    width: 90%;
+    height: auto;
+    column-gap: 15px;
+    margin-top: 40px;
+}
+.note1{
+    display: flex;
+    flex-flow: wrap;
+    column-gap: 15px;
+}
+.note2{
+    flex-flow: wrap;
+    column-gap: 15px;
+}
+
 .text{
     color: #5f6368;
     letter-spacing: .07272727em;
@@ -76,5 +87,8 @@
     margin-top: 40px;
     left: 10%;
 }
+  
+  
+
   
   
